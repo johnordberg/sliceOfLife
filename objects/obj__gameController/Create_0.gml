@@ -2,23 +2,36 @@
 // You can write your code in this editor
 
 application_surface_enable(true);
-viewData = {
-	zoom_level: 2,
-	full_screen: true,
-	view_width: 0,
-	view_height: 0
-}
+
 
 settings = {
-	music_volume: 100,
-	game_volume: 100
+	continue_index:0,
+	audio: {
+		music_volume: 100,
+		game_volume: 100
+	},
+	viewData: {
+		zoom_level: 2,
+		full_screen: true,
+		view_width: 0,
+		view_height: 0
+	},
+	controls: {
+		up: ord("W"),
+		down: ord("S"),
+		left: ord("A"),
+		right: ord("D")
+	},
+	gameplay: {
+		screenshake: true,
+		nudity: true
+	}
 }
 
-controls = {
-	up: ord("W"),
-	down: ord("S"),
-	left: ord("A"),
-	right: ord("D")
+saveFiles = getSaveFiles();
+newGame = true;
+if (array_length(saveFiles) > 0){
+	newGame = false;
 }
 
 cursorState = "ready";

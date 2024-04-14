@@ -11,8 +11,10 @@ if (hovering && mouse_check_button(mb_left)){
 else if (mouse_check_button_released(mb_left)){
 	clicked = false;
 	obj__gameController.cursorState = "ready";
-	obj__gameController.settings[$ target_settings_variable_name] = sliderValue;
+	obj__gameController.settings[$ settings_category][$ target_settings_variable_name] = sliderValue;
 	show_debug_message("Slider Value: " + string(sliderValue));
+	
+	saveSettings();
 }
 
 if (clicked){
@@ -36,4 +38,5 @@ if (clicked){
 	}
 	
 	sliderValue = currentValue;
+	
 }

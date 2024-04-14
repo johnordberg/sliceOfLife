@@ -3,7 +3,7 @@
 function setView(){
 	var gameController = obj__gameController;
 	display_reset(0, true);
-	window_set_fullscreen(gameController.viewData.full_screen);
+	window_set_fullscreen(gameController.settings.viewData.full_screen);
 	var ww = window_get_width();
 	var wh = window_get_height();
 	if (os_browser == browser_not_a_browser){
@@ -19,11 +19,11 @@ function setView(){
 	   show_debug_message("browser");
 	}
 	
-	gameController.viewData.view_width = ww;
-	gameController.viewData.view_height = wh;
+	gameController.settings.viewData.view_width = ww;
+	gameController.settings.viewData.view_height = wh;
 	
-	var zoomed_ww = ww / gameController.viewData.zoom_level;
-	var zoomed_wh = wh / gameController.viewData.zoom_level;
+	var zoomed_ww = ww / gameController.settings.viewData.zoom_level;
+	var zoomed_wh = wh / gameController.settings.viewData.zoom_level;
 	
 	view_camera[0] = camera_create_view(0, 0, zoomed_ww, zoomed_wh, 0, obj__camera, -1, -1, round(zoomed_ww/2), round(zoomed_wh/2));
 	view_visible[0] = true;

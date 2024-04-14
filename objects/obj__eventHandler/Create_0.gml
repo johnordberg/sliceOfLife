@@ -7,6 +7,7 @@ gameEvents = {
 	initiate_game: function(sender, targets){
 		setView();
 		room_goto(room__mainMenu);
+		loadSettings();
 		return true;
 	},
 	set_view: function(sender, targets){
@@ -52,7 +53,8 @@ gameEvents = {
 		return true;
 	},
 	open_gameplay_settings: function(sender, target){
-		// open audio settings
+		room_goto(room__settingsGameplay);
+		return true;
 	},
 	open_main_menu: function(sender, target){
 		room_goto(room__mainMenu);

@@ -7,7 +7,7 @@ hovering = false;
 clicked = false;
 uiElement = true;
 
-x = obj__gameController.viewData.view_width / 2;
+x = obj__gameController.settings.viewData.view_width / 2;
 initialY = y;
 yOffset = 0;
 xInit = x;

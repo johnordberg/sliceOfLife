@@ -25,9 +25,10 @@ if (clicked){
 		boundKey = keyboard_key;
 		displayChar = getKeyName(boundKey);
 		displayLabel = label;
-		obj__gameController.controls[$ target_settings_variable_name] = boundKey;
+		obj__gameController.settings[$ settings_category][$ target_settings_variable_name] = boundKey;
 		obj__gameController.cursorState = "ready";
 		clicked = false;
 		show_debug_message("Key Assigned to: " + string(boundKey));
+		saveSettings();
 	}
 }

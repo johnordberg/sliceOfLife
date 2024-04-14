@@ -5,4 +5,4 @@ if (instance_exists(obj__menuBorder)){
 	yOffset = obj__menuBorder.yOffset;
 	y = initialY + yOffset;
 }
-x = obj__gameController.viewData.view_width / 2;
+x = obj__gameController.settings.viewData.view_width / 2;
