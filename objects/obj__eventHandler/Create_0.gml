@@ -48,7 +48,8 @@ gameEvents = {
 		return true;
 	},
 	open_keybind_settings: function(sender, target){
-		// open audio settings
+		room_goto(room__settingsKeybindings);
+		return true;
 	},
 	open_gameplay_settings: function(sender, target){
 		// open audio settings

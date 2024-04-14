@@ -14,6 +14,13 @@ settings = {
 	game_volume: 100
 }
 
+controls = {
+	up: ord("W"),
+	down: ord("S"),
+	left: ord("A"),
+	right: ord("D")
+}
+
 cursorState = "ready";
 
 currentActor = 0;
