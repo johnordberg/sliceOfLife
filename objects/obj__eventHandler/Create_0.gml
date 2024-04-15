@@ -26,17 +26,21 @@ gameEvents = {
 	},
 	new_game: function(sender, target){
 		queueEvent(-1, "create_player", false);
+		instance_create_depth(0, 0, 0, obj__saveDataStorage);
+		var savedSuccess = createNewSaveGame();
 		room_goto(Room2);
 		return true;
 	},
 	continue_game: function(sender, target){
-		// Continue game
+		var unsortedSaveNames = getSaveFiles();
+		var sortedSaveNames = getSaveFilesSortedByTouchDate(unsortedSaveNames);
+		show_debug_message(sortedSaveNames[0]);
+		return true;
 	},
 	open_load_menu: function(sender, target){
 		// Load Game
 	},
 	open_settings_menu: function(sender, target){
-		// open settings menu here
 		room_goto(room__settingsIndex);
 		return true;
 	},

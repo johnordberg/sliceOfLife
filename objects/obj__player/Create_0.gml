@@ -5,7 +5,7 @@ fixAndSetPlayerMask();
 state = "standing";
 stateHistory = ["standing"];
 
-controls = obj__gameController.controls;
+controls = obj__gameController.settings.controls;
 
 movementVars = {
 	walkSpeed: 4,

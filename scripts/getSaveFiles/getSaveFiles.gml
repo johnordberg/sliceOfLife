@@ -6,7 +6,7 @@ function getSaveFiles(){
     for (var i = 1; i <= max_saves; i++) {
         var file_name = "save" + string(i) + ".json";
         if (file_exists(file_name)) {
-            save_files[| i-1] = file_name;
+			array_push(save_files, file_name);
         }
     }
     return save_files;

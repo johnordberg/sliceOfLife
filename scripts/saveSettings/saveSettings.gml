@@ -5,5 +5,6 @@ function saveSettings(){
 	var json_string = json_stringify(obj__gameController.settings);
 	var file = file_text_open_write(file_name);
     file_text_write_string(file, json_string);
+	file_text_write_string(file, "#"); // End with a newline or delimiter
     file_text_close(file);
 }
